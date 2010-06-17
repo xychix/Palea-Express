@@ -1,0 +1,84 @@
+body 
+{  
+	font-family: Arial, Helvetica, sans-serif; 
+	font-size: 12px; 
+	color: #144561; 
+	background-image: url('../img/back.jpg'); 
+	background-color: #FFFFFF 
+}
+
+table.column
+{
+	width: 50%;
+	cellspacing: 0;
+	border-width: 12px;
+	border-color: #FFFFFF;
+	border-style: none;
+	font-family: Arial, Helvetica, sans-serif; 
+	font-size: 12px;
+	color: #144561;
+	a:color: #144561;
+}
+
+table
+{
+	width: 90%;
+	cellspacing: 0;
+	border-width: 12px;
+	border-color: #FFFFFF;
+	border-style: none;
+	font-family: Arial, Helvetica, sans-serif; 
+	font-size: 12px;
+	color: #144561;
+	a:color: #144561;
+}
+
+td.head
+{
+	font-weight: bold;
+	border-width: 1px;
+	border-color: #DDDDDD;
+	border-style: solid;
+	background-color: #DDDDDD;
+}
+
+td.invisible
+{
+	vertical-align: top;
+	border-width: 0px;
+	border-color: #DDDDDD;
+	border-style: none;
+}
+
+td
+{
+	vertical-align: top;
+	border-width: 1px;
+	border-color: #DDDDDD;
+	border-style: solid;
+}
+
+a
+{
+	font-family: Arial, Helvetica, sans-serif; 
+	font-size: 12px;
+	text-decoration:underline;
+	color: #144561;
+}
+
+a:hover
+{
+	color:#144561; 
+	text-decoration:none; 
+}
+
+input,textarea,select
+{
+	font-family: Arial, Helvetica, sans-serif; 
+	font-size: 11px;
+	background-color: #F8F8F8;
+	color: #144561;
+	border:1px solid #DDDDDD;
+
+
+}

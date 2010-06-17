@@ -1,0 +1,31 @@
+-- VERSION 2.2 --
+
+* cleaning:		Cleaning everything for first github release
+* namechange: 	The software is renames to Palea as it approaches release
+* bugfix:		option -o is not default set to a file but to /dev/null, you 
+				should not need this information. If you do please specify is 
+				manually to a nonexisting file manually.
+* readability:	Functions are now documented better. Also some code has 
+				switched place, first functionality, thereafter verbose printing
+				if needed.
+				Help functions are now proper.
+
+-- VERSION 2.1 --
+
+Working release, no proper documentation
+
+-- GENERAL INFORMATION --
+
+Unpack the tar and point your apache to the www dir. This contains the reporting php scripts.
+You will need apache, php, sqlite3, impacket for python and screen   as packages.
+You can have the server itself send out a ping to a random ip and have the catcher report this 'hartbeat'. Session 0 is used for this.
+
+I'd advice to start the catcher.py as root in a screen...
+
+We use nmap to generate an input list of IP's. in the iplists folder you'll find a script for this purpose. The thrower has a reasonable help function that should get you going. More documentation is to follow.
+
+
+hartbeat in crontab as root:
+
+# m h  dom mon dow   command
+  * *  *   *   *    /home/www-data/virtual_host_1/palea-bin/thrower.py -t I -s 0 -i /home/www-data/virtual_host_1/palea-bin/iplists/hartbeat.ips -c "YOUR IP"
