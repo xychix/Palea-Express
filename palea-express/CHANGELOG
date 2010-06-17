@@ -28,4 +28,4 @@ We use nmap to generate an input list of IP's. in the iplists folder you'll find
 hartbeat in crontab as root:
 
 # m h  dom mon dow   command
-  * *  *   *   *    /home/www-data/virtual_host_1/palea-bin/thrower.py -t I -s 0 -i /home/www-data/virtual_host_1/palea-bin/iplists/hartbeat.ips -c "YOUR IP"
+  * *  *   *   *    /home/www-data/virtual_host_1/palea-express/thrower.py -t I -s 0 -i /home/www-data/virtual_host_1/palea-express/iplists/hartbeat.ips -c "YOUR IP"
