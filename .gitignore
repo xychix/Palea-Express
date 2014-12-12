@@ -1,0 +1,10 @@
+#ignore compiled and other binairy files
+
+#python related
+*.pyc
+
+#sqlite db
+*.db
+
+#vim files
+*~
