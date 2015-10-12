@@ -2,7 +2,7 @@ Palea
 ==========
 
 I assume you've read the PDF's on the techniques and goal of Palea. They
-are also included in this git repository. It is written for a PoC I had 
+are also included in this git repository. These were written for a PoC I had 
 before coding it all together.
 
 Clone the repo and run ./thrower.py -h as root. You will get the help 
