@@ -1,5 +1,17 @@
 Palea
-==========
+=====
+
+Palea is a tool to help discover if devices on your (secured and firewalled) 
+network are also unknowingly connected to unknown other networks that would
+facilitate attacks and information leaks to the outside. Such an unknown 
+network could for instance be a known device on your trusted network that 
+also has a USB dongle in it connected to the open internet over GSM/2G/3G/xG.
+
+By spoofing packets, Palea can be used to trick systems into exposing their
+connections to the internet. Palea can be run 24/7 on your network to also
+discover temporary connections.
+
+##How-to
 
 I assume you've read the PDF's on the techniques and goal of Palea. They
 are also included in this git repository. These were written for a PoC I had 
