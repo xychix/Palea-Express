@@ -1,5 +1,6 @@
-#!/usr/bin/python
+#!/usr/bin/env python
 
+# See LICENSE.txt for details.
 # Version See CHANGELOG file
 
 # imports of default stuff
@@ -179,8 +180,8 @@ def main(argv):
 		print "----------------------------------------"
 	
 	
-	#We've gonna do some sanity checks here, lets use a bool to see if we need to quit
-	# DANGER: we assume all is ok till we decide it's not, actually we want deny by default
+	# We've gonna do some sanity checks here, lets use a bool to see if we need to quit
+	# DANGER: we assume all is ok until we decide it's not, actually we want 'deny by default'
 	quit = False
 	
         # Recent hack to ensure we can work without output (for the heartbeat)
@@ -210,7 +211,7 @@ def main(argv):
 		print "- %s (Catcher) is not a valid IP address!" % (conf["catcher"])
 		quit = True
 
-        # sanity checking on some numeric values
+        # Sanity checking on some numeric values
 	try:
 		float(conf["delay"])
 		if (float(conf["delay"]) < 0 ) or (float(conf["delay"]) > 60 ) :
@@ -283,7 +284,7 @@ def main(argv):
                 	        print "  - timstamp: %10f | victim: %16s | catcher: %16s | session: %4s | unique: %16f | test:%5s" \
 					% (unique_id,ip.strip(),conf["catcher"],conf["session"],counter,"UDP")
 
-	        # Verbosety printing a U or an I for each packet send.	
+	        # Verbosety: printing a U or an I for each packet sent.	
 		if conf["verbose"] in range(1,3):
 			sys.stdout.write(conf["tests"])
 			sys.stdout.flush()
