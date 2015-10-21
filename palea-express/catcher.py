@@ -1,5 +1,6 @@
-#!/usr/bin/python
+#!/usr/bin/env python
 
+# See LICENSE.txt for details.
 # Version: see CHANGELOG file
 
 # Importing default stuff
@@ -31,8 +32,8 @@ This database can be queried with the simple php frontend.
 ! The catcher needs to be run with root privileges !
 
 We advise to run the catcher in a screen (http://www.gnu.org/software/screen/)
-so you can easily see if it's still running and whether packages are recieved.
-Exameple:
+so you can easily see if it's still running and whether packages are received.
+Example:
 
 
 Optional settings:
@@ -165,7 +166,7 @@ def CatchICMP(conf):
 				print "  database commit done, 10 seconds since last commit have passed!"
 
 	print "Succesfully stopped"
-	# Reset te signalhandlers
+	# Reset the signalhandlers
 	signal.signal(signal.SIGINT,oldInt)
 	signal.signal(signal.SIGINT,oldTerm)
 	signal.signal(signal.SIGINT,oldHup)
@@ -175,15 +176,15 @@ def CatchICMP(conf):
 def main(argv):
         """Main function, reads arguments, does sanity checks and will start server loop """
 
-	# some default configuration value's
+	# Some default configuration value's
 	conf = {"verbose":1,"debug":0,"quiet":0}
 
         # Code block for handeling options
         try:
                 optlist, list = getopt.getopt(argv[1:],"qhvD", ["quiet","help","debug"])
         except getopt.GetoptError, err:
-                #print helpinfo and exit
-                print str(err) #will tell what option isn't recognized
+                # Print helpinfo and exit
+                print str(err) # Will tell what option isn't recognized
                 usage()
                 sys.exit(1)
         for opt in optlist:
@@ -197,18 +198,18 @@ def main(argv):
                         usage()
                         sys.exit(0)
 
-	# Sanity check, we only have one! Default verbose is 1, quiett makes it 0. -v and -q should not be used together
+	# Sanity check, we only have one! Default verbose is 1, quiet makes it 0. -v and -q should not be used together
 	if conf['quiet']:
 		if conf['verbose'] > 1:
 			print "Please don't use -q or --quiet in combination with -v"
 			sys.exit(0)
 		conf['verbose'] = 0
 
-        # block of code for writing verbose output
+        # Block of code for writing verbose output
 	if conf['verbose'] > 0: 
 		print "Catcher running with verbosity %d and debug-level %d" % (conf['verbose'],conf['debug'])
 
-	# start the serverloop
+	# Start the server loop
 	CatchICMP(conf)
 
 if __name__ == "__main__":
