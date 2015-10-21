@@ -13,7 +13,7 @@ if ( $db = new PDO("sqlite:../../var/palea.db")){
 	printf("<td class=\"invisible\" align=\"right\"><img src=\"logo.jpg\"></td></tr></table>");
 
 
-// Einde kop hier beginnen value tables 	
+// End of header, the value tables start here
 	//$resultset = $db->query("SELECT timestamp, session, count(*) as count FROM catch GROUP BY session ORDER BY timestamp DESC;");
 	$resultset = $db->query("SELECT timestamp, session, count(*) as count FROM catch WHERE gateway NOT LIKE \"127.0.0.1\" AND gateway NOT LIKE \"77.235.37.117\" GROUP BY session ORDER BY timestamp DESC;");
 	printf("<table><tr><td class=\"invisible\" colspan=\"3\"><h2>Sessions and # of results</h2></td></tr>");
