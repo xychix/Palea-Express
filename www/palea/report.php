@@ -9,7 +9,7 @@ if ( $db = new PDO("sqlite:../../var/palea.db")){
 	printf("<body><table width=100%%><tr><td class=\"invisible\"><a href=\"index.php\">[home]</a><br><h1>Results for sesion %s</h1></td>", $session);
 	printf("<td class=\"invisible\" align=\"right\"><img src=\"logo.jpg\"></td></tr></table>");
 
-// Einde kop begin tabellen (2 stuks naast elkaar in paraplu tabel)
+// End header section, start of tabular data)
 
 	printf("<table><tr valign=\"TOP\"><td>");
 	
